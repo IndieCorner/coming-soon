@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="450px" height="390px" viewBox="0 0 450 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>logo</title>
+    <g id="logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(54.000000, 17.000000)">
+            <g id="lotus" transform="translate(0.000000, 8.000000)">
+                <g id="line" transform="translate(167.000000, -0.000000)" fill="#000000">
+                    <g id="top" transform="translate(3.000000, 27.000000) rotate(90.000000) translate(-3.000000, -27.000000) translate(-24.000000, 24.000000)">
+                        <circle id="Oval-Copy-6" transform="translate(51.000000, 3.000000) scale(1, -1) translate(-51.000000, -3.000000) " cx="51" cy="3" r="3"></circle>
+                        <circle id="Oval-Copy-5" transform="translate(43.000000, 3.000000) scale(1, -1) translate(-43.000000, -3.000000) " cx="43" cy="3" r="3"></circle>
+                        <circle id="Oval-Copy-4" transform="translate(35.000000, 3.000000) scale(1, -1) translate(-35.000000, -3.000000) " cx="35" cy="3" r="3"></circle>
+                        <circle id="Oval-Copy-3" transform="translate(27.000000, 3.000000) scale(1, -1) translate(-27.000000, -3.000000) " cx="27" cy="3" r="3"></circle>
+                        <circle id="Oval-Copy-2" transform="translate(19.000000, 3.000000) scale(1, -1) translate(-19.000000, -3.000000) " cx="19" cy="3" r="3"></circle>
+                        <circle id="Oval-Copy" transform="translate(11.000000, 3.000000) scale(1, -1) translate(-11.000000, -3.000000) " cx="11" cy="3" r="3"></circle>
+                        <circle id="Oval" transform="translate(3.000000, 3.000000) scale(1, -1) translate(-3.000000, -3.000000) " cx="3" cy="3" r="3"></circle>
+                    </g>
+                    <g id="Group" transform="translate(0.000000, 199.000000)">
+                        <g id="top" transform="translate(3.000000, 27.000000) rotate(90.000000) translate(-3.000000, -27.000000) translate(-24.000000, 24.000000)">
+                            <circle id="Oval-Copy-6" transform="translate(51.000000, 3.000000) scale(1, -1) translate(-51.000000, -3.000000) " cx="51" cy="3" r="3"></circle>
+                            <circle id="Oval-Copy-5" transform="translate(43.000000, 3.000000) scale(1, -1) translate(-43.000000, -3.000000) " cx="43" cy="3" r="3"></circle>
+                            <circle id="Oval-Copy-4" transform="translate(35.000000, 3.000000) scale(1, -1) translate(-35.000000, -3.000000) " cx="35" cy="3" r="3"></circle>
+                            <circle id="Oval-Copy-3" transform="translate(27.000000, 3.000000) scale(1, -1) translate(-27.000000, -3.000000) " cx="27" cy="3" r="3"></circle>
+                            <circle id="Oval-Copy-2" transform="translate(19.000000, 3.000000) scale(1, -1) translate(-19.000000, -3.000000) " cx="19" cy="3" r="3"></circle>
+                            <circle id="Oval-Copy" transform="translate(11.000000, 3.000000) scale(1, -1) translate(-11.000000, -3.000000) " cx="11" cy="3" r="3"></circle>
+                            <circle id="Oval" transform="translate(3.000000, 3.000000) scale(1, -1) translate(-3.000000, -3.000000) " cx="3" cy="3" r="3"></circle>
+                        </g>
+                    </g>
+                </g>
+                <path d="M138.66683,203.4678 C144.550871,217.27703 143.188273,229.930522 143.188273,229.930522 C143.188273,229.930522 146.001616,267.209791 114.99091,290.291773 C83.971069,267.209791 86.7844115,229.930522 86.7844115,229.930522 C86.7844115,229.930522 85.2419726,216.837772 90.8856801,203.640938 C94.6481518,194.843048 102.681711,183.72666 114.986359,170.291773 C126.850646,183.202971 134.744136,194.261646 138.66683,203.4678 Z" id="leaf-left" stroke="#231F1F" stroke-width="3" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(114.958277, 230.291773) scale(-1, 1) rotate(-70.000000) translate(-114.958277, -230.291773) "></path>
+                <path d="M249.66683,203.4678 C255.550871,217.27703 254.188273,229.930522 254.188273,229.930522 C254.188273,229.930522 257.001616,267.209791 225.99091,290.291773 C194.971069,267.209791 197.784411,229.930522 197.784411,229.930522 C197.784411,229.930522 196.241973,216.837772 201.88568,203.640938 C205.648152,194.843048 213.681711,183.72666 225.986359,170.291773 C237.850646,183.202971 245.744136,194.261646 249.66683,203.4678 Z" id="leaf-right" stroke="#231F1F" stroke-width="3" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(225.958277, 230.291773) scale(-1, 1) rotate(70.000000) translate(-225.958277, -230.291773) "></path>
+                <path d="M0,210.291016 C19.2747732,156.231427 73.2965132,143.977197 73.2965132,143.977197 C73.2965132,143.977197 124.88849,123.752296 171,157.708984 C151.723877,211.768573 97.7021369,224.022803 97.7021369,224.022803 C97.7021369,224.022803 46.1101603,244.247704 0,210.291016 Z" id="bottom-left" stroke="#231F1F" stroke-width="4" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(85.500000, 184.000000) scale(-1, 1) rotate(-180.000000) translate(-85.500000, -184.000000) "></path>
+                <path d="M130,185.062662 C115.41892,197.579141 93.0082591,210.660272 61.5956005,210.283837 C54.2915846,184.659339 59.3316251,160.33892 65.9214106,143.291773 C80.0341746,119.292613 95.92389,101.428756 113.590557,89.7002005 C131.257223,77.9716453 149.727038,71.0715785 169,69 C172.791996,74.8037779 171.791996,91.2343688 166,118.291773 C160.208004,145.349177 148.208004,167.60614 130,185.062662 Z" id="middle-left" stroke="#231F1F" stroke-width="4" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(114.625254, 139.645886) scale(-1, 1) rotate(-180.000000) translate(-114.625254, -139.645886) "></path>
+                <path d="M171,210.291016 C190.274773,156.231427 244.296513,143.977197 244.296513,143.977197 C244.296513,143.977197 295.88849,123.752296 342,157.708984 C322.723877,211.768573 268.702137,224.022803 268.702137,224.022803 C268.702137,224.022803 217.11016,244.247704 171,210.291016 Z" id="bottom-right" stroke="#231F1F" stroke-width="4" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(256.500000, 184.000000) rotate(-180.000000) translate(-256.500000, -184.000000) "></path>
+                <path d="M241,184.062662 C226.41892,196.579141 204.008259,209.660272 172.595601,209.283837 C165.291585,183.659339 170.331625,159.33892 176.921411,142.291773 C191.034175,118.292613 206.92389,100.428756 224.590557,88.7002005 C242.257223,76.9716453 260.727038,70.0715785 280,68 C283.791996,73.8037779 282.791996,90.2343688 277,117.291773 C271.208004,144.349177 259.208004,166.60614 241,184.062662 Z" id="middle-right" stroke="#231F1F" stroke-width="4" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(225.625254, 138.645886) rotate(-180.000000) translate(-225.625254, -138.645886) "></path>
+                <path d="M205.18361,81.2917727 C213.925911,101.809041 211.901411,120.609153 211.901411,120.609153 C211.901411,120.609153 216.081376,175.997377 170.006761,210.291773 C123.918575,175.997377 128.09854,120.609153 128.09854,120.609153 C128.09854,120.609153 125.806839,101.156406 134.19206,81.5490145 C139.782208,68.4774199 151.718188,51.9610817 170,32 C187.627539,51.1830031 199.355409,67.613594 205.18361,81.2917727 Z" id="Path" stroke="#231F1F" stroke-width="4" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" transform="translate(169.958277, 121.145886) scale(-1, 1) rotate(-180.000000) translate(-169.958277, -121.145886) "></path>
+            </g>
+        </g>
+        <g id="text" transform="translate(27.500000, 288.000000)" fill="#000000" font-family="Raleway-Thin, Raleway" font-size="72" font-weight="300">
+            <text id="Indie-Corner">
+                <tspan x="0.148" y="68">Indie Corner</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

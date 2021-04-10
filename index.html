@@ -16,7 +16,7 @@
         text-align: center;
         font-size: 20px;
         padding: 2rem 1rem;
-        font-family: 'Raleway', sans-serif;
+        font-family: "Raleway", sans-serif;
       }
 
       .subtext,
@@ -165,7 +165,38 @@
       }
     </style>
     <script>
-      __T = {};
+      document.addEventListener("DOMContentLoaded", () => {
+        const DEFAULT_LOCALE = "en";
+        const __T = {"en":{"indiecorner":{"title":"Indie Corner - Coming Soon","page-subtext":"Indie Corner aims to promote Indian Culture\nand bring some amazing products like\nClothing, Jewellery &amp; Decoration!","coming-soon":"Coming Soon","stay-tuned":"Stay tuned with the Indie Corner's Journey","email-placeholder":"Email Address","subscribe-button":"Subscribe","subscription-success":"Success! Now check your email to confirm your subscription."}},"fr":{"indiecorner":{"title":"Indie Corner - Coming Soon","page-subtext":"Indie Corner a pour mission de partager la culture indienne\nen vous proposant de merveilleux produits tels que\ndes vêtements, bijoux, décoration…","coming-soon":"Coming Soon","stay-tuned":"Restez connectés pour plus d’informations ","email-placeholder":"Votre adresse e-mail","subscribe-button":"S’inscrire","subscription-success":"Merci ! Vérifiez maintenant votre e-mail pour confirmer votre inscription."}},"de":{"indiecorner":{"title":"Indie Corner - Coming Soon","page-subtext":"Die Mission von Indie Corner ist es, die indische Kultur\nzu teilen, indem wir Ihnen wunderbare Produkte wie\nKleidung, Schmuck, Dekoration...","coming-soon":"Coming Soon","stay-tuned":"Melde Dich jetzt an\nUnd lass Dich über unsere produkte","email-placeholder":"E-Mail Adresse ","subscribe-button":"Anmelden","subscription-success":"Wunderbar! Prüfen Sie jetzt Ihre E-Mail, um Ihr Abonnement zu bestätigen."}},"es":{"indiecorner":{"title":"Indie Corner - Coming Soon","page-subtext":"La misión de Indie Corner es compartir la cultura india\nofreciéndole productos maravillosos\ncomo ropas, joyas, decoración...","coming-soon":"Coming Soon","stay-tuned":"Si quieres conocer nuestras novedades...","email-placeholder":"Email","subscribe-button":"Suscribete","subscription-success":"Consulte email para confirmar tu suscripción."}}};
+        const formOptions = JSON.parse(
+          `{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":""},"analytics":{"google":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://convertkit.com?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=poweredby&amp;utm_content=form"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}`
+        );
+        const CK_JS = "https://f.convertkit.com/ckjs/ck.5.js";
+        const form = "#subscribe-form";
+
+        const hostname = window.location.hostname;
+        const locale = hostname.split(".")[1] || DEFAULT_LOCALE;
+        const translations = (__T[locale] || __T[DEFAULT_LOCALE]).indiecorner;
+        formOptions.settings.after_subscribe.success_message =
+          translations["subscription-success"];
+
+        document.title = translations.title;
+        document.querySelector(form).dataset.options = JSON.stringify(
+          formOptions
+        );
+
+        const allT = document.querySelectorAll("[data-t-key]");
+        allT.forEach(function (el) {
+          const translation = translations[el.dataset.tKey].replace('\n', '<br />');
+          if (el.dataset.tReplace) {
+            el.dataset.tReplace.split(",").map((replace) => {
+              el.setAttribute(replace, translation);
+            });
+            return;
+          }
+          el.innerHTML = translation;
+        });
+      });
     </script>
   </head>
   <body>
@@ -173,15 +204,16 @@
       <header>
         <img src="./img/logo.png" alt="Indie Corner" height="200" />
       </header>
-      <section class="subtext">
+      <section class="subtext" data-t-key="page-subtext">
         Indie Corner aims to promote Indian Culture<br />and bring some amazing
         products like<br />Clothing, Jewelry & Decoration!
       </section>
-      <section class="coming-soon">Coming Soon</section>
+      <section class="coming-soon" data-t-key="coming-soon">
+        Coming Soon
+      </section>
       <section class="subscribe">
         <div>
           <svg
-            id="Layer_1"
             width="35"
             height="35"
             style="enable-background: new 0 0 64 64"
@@ -191,40 +223,33 @@
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
           >
-            <style type="text/css">
-              .st0 {
-                fill: #000000;
-              }
-            </style>
             <g>
-              <g
-                id="Icon-Envelope"
-                transform="translate(78.000000, 232.000000)"
-              >
+              <g transform="translate(78.000000, 232.000000)">
                 <path
-                  class="st0"
+                  fill="#000000"
                   d="M-22.5-213.2l-1.9-1.9l-17.6,17.6c-2.2,2.2-5.9,2.2-8.1,0L-67.7-215l-1.9,1.9l13.1,13.1     l-13.1,13.1l1.9,1.9l13.1-13.1l2.6,2.6c1.6,1.6,3.7,2.5,5.9,2.5s4.3-0.9,5.9-2.5l2.6-2.6l13.1,13.1l1.9-1.9l-13.1-13.1     L-22.5-213.2"
-                  id="Fill-3"
                 />
                 <path
-                  class="st0"
+                  fill="#000000"
                   d="M-26.2-181.6h-39.5c-2.3,0-4.2-1.9-4.2-4.2v-28.2c0-2.3,1.9-4.2,4.2-4.2h39.5     c2.3,0,4.2,1.9,4.2,4.2v28.2C-22-183.5-23.9-181.6-26.2-181.6L-26.2-181.6z M-65.8-215.5c-0.8,0-1.4,0.6-1.4,1.4v28.2     c0,0.8,0.6,1.4,1.4,1.4h39.5c0.8,0,1.4-0.6,1.4-1.4v-28.2c0-0.8-0.6-1.4-1.4-1.4H-65.8L-65.8-215.5z"
-                  id="Fill-4"
                 />
               </g>
             </g>
           </svg>
-          <p>Stay tuned with the Indie Corner's Journey</p>
+          <p data-t-key="stay-tuned">
+            Stay tuned with the Indie Corner's Journey
+          </p>
         </div>
         <form
           action="https://app.convertkit.com/forms/2178212/subscriptions"
           class="seva-form formkit-form"
           method="post"
+          id="subscribe-form"
           data-sv-form="2178212"
           data-uid="6d55bc8d41"
           data-format="inline"
           data-version="5"
-          data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":""},"analytics":{"google":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://convertkit.com?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=poweredby&amp;utm_content=form"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'
+          data-options=""
           min-width="400 500 600 700 800"
         >
           <div data-style="clean">
@@ -244,6 +269,8 @@
                   name="email_address"
                   aria-label="Email Address"
                   placeholder="Email Address"
+                  data-t-key="email-placeholder"
+                  data-t-replace="placeholder,aria-label"
                   required=""
                   type="email"
                 />
@@ -257,13 +284,12 @@
                   <div></div>
                   <div></div>
                 </div>
-                <span class="">Subscribe</span>
+                <span class="" data-t-key="subscribe-button">Subscribe</span>
               </button>
             </div>
           </div>
         </form>
       </section>
-      <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
     </div>
   </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "prebuild": "cp -r public/* dist/",
+    "prebuild": "cp -r public/ dist/",
     "build": "node ./bin/generate.js",
     "start": "rm -rf dist && mkdir dist && npm run build && serve dist"
   },

@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "prebuild": "cp -r public/* dist/",
+    "build": "node ./bin/generate.js",
+    "start": "rm -rf dist && mkdir dist && npm run build && serve dist"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "serve": "^11.3.2"
+  },
+  "dependencies": {
+    "mustache": "^4.2.0"
+  }
+}

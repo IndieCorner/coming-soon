@@ -163,9 +163,21 @@
       .formkit-submit[data-active] .formkit-spinner ~ span {
         opacity: 0;
       }
+
+      .ck-hidden {
+        display: none;
+      }
     </style>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        // from CK tags
+        const domainMap = {
+          de: '2412775',
+          es: '2412784',
+          eu: '2412760',
+          en: '2412760',
+          fr: '2412761'
+        }
         const DEFAULT_LOCALE = "en";
         const __T = {"en":{"indiecorner":{"title":"Indie Corner - Coming Soon","page-subtext":"Indie Corner aims to promote Indian Culture\nand bring some amazing products like\nClothing, Jewellery &amp; Decoration!","coming-soon":"Coming Soon","stay-tuned":"Stay tuned with the Indie Corner's Journey","email-placeholder":"Email Address","subscribe-button":"Subscribe","subscription-success":"Success! Now check your email to confirm your subscription."}},"fr":{"indiecorner":{"title":"Indie Corner - Coming Soon","page-subtext":"Indie Corner a pour mission de partager la culture indienne\nen vous proposant de merveilleux produits tels que\ndes vêtements, des bijoux, de la décoration…","coming-soon":"Coming Soon","stay-tuned":"Restez connectés pour plus d’informations ","email-placeholder":"Votre adresse e-mail","subscribe-button":"S’inscrire","subscription-success":"Merci ! Vérifiez maintenant votre e-mail pour confirmer votre inscription."}},"de":{"indiecorner":{"title":"Indie Corner - Coming Soon","page-subtext":"Die Mission von Indie Corner ist es, die indische Kultur\nzu teilen, indem wir Ihnen wunderbare Produkte wie\nKleidung, Schmuck, Dekoration...","coming-soon":"Coming Soon","stay-tuned":"Melde Dich jetzt an\nUnd lass Dich über unsere produkte","email-placeholder":"E-Mail Adresse ","subscribe-button":"Anmelden","subscription-success":"Wunderbar! Prüfen Sie jetzt Ihre E-Mail, um Ihr Abonnement zu bestätigen."}},"es":{"indiecorner":{"title":"Indie Corner - Coming Soon","page-subtext":"La misión de Indie Corner es compartir la cultura india\nofreciéndole productos maravillosos\ncomo ropas, joyas, decoración...","coming-soon":"Coming Soon","stay-tuned":"Si quieres conocer nuestras novedades...","email-placeholder":"Email","subscribe-button":"Suscribete","subscription-success":"Consulte email para confirmar tu suscripción."}}};
         const formOptions = JSON.parse(
@@ -175,7 +187,8 @@
         const form = "#subscribe-form";
 
         const hostname = window.location.hostname;
-        const locale = hostname.split(".")[1] || DEFAULT_LOCALE;
+        let locale = hostname.split(".")[1] || DEFAULT_LOCALE;
+        locale = domainMap[locale] ? locale : DEFAULT_LOCALE;
         const translations = (__T[locale] || __T[DEFAULT_LOCALE]).indiecorner;
         formOptions.settings.after_subscribe.success_message =
           translations["subscription-success"];
@@ -184,6 +197,9 @@
         document.querySelector(form).dataset.options = JSON.stringify(
           formOptions
         );
+        console.log(domainMap, locale, domainMap[locale])
+        var opt = document.querySelector(`[value="${domainMap[locale]}"]`)
+        opt && opt.setAttribute('selected', true);
 
         const allT = document.querySelectorAll("[data-t-key]");
         allT.forEach(function (el) {
@@ -278,6 +294,27 @@
                   required=""
                   type="email"
                 />
+              </div>
+              <div class="formkit-field ck-hidden">
+                <div
+                  data-group="dropdown"
+                  class="formkit-3340"
+                  group="field"
+                  type="Custom"
+                  order="1"
+                  save_as="Tag"
+                >
+                  <select
+                    class="formkit-select"
+                    data-element="tags-select"
+                    name="tags[]"
+                  >
+                    <option value="2412775">.de</option>
+                    <option value="2412784">.es</option>
+                    <option value="2412760">.eu</option>
+                    <option value="2412761">.fr</option>
+                  </select>
+                </div>
               </div>
               <button
                 data-element="submit"

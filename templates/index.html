@@ -163,9 +163,21 @@
       .formkit-submit[data-active] .formkit-spinner ~ span {
         opacity: 0;
       }
+
+      .ck-hidden {
+        display: none;
+      }
     </style>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        // from CK tags
+        const domainMap = {
+          de: '2412775',
+          es: '2412784',
+          eu: '2412760',
+          en: '2412760',
+          fr: '2412761'
+        }
         const DEFAULT_LOCALE = "en";
         const __T = {{{ translations }}};
         const formOptions = JSON.parse(
@@ -175,7 +187,8 @@
         const form = "#subscribe-form";
 
         const hostname = window.location.hostname;
-        const locale = hostname.split(".")[1] || DEFAULT_LOCALE;
+        let locale = hostname.split(".")[1] || DEFAULT_LOCALE;
+        locale = domainMap[locale] ? locale : DEFAULT_LOCALE;
         const translations = (__T[locale] || __T[DEFAULT_LOCALE]).indiecorner;
         formOptions.settings.after_subscribe.success_message =
           translations["subscription-success"];
@@ -184,6 +197,9 @@
         document.querySelector(form).dataset.options = JSON.stringify(
           formOptions
         );
+        console.log(domainMap, locale, domainMap[locale])
+        var opt = document.querySelector(`[value="${domainMap[locale]}"]`)
+        opt && opt.setAttribute('selected', true);
 
         const allT = document.querySelectorAll("[data-t-key]");
         allT.forEach(function (el) {
@@ -278,6 +294,27 @@
                   required=""
                   type="email"
                 />
+              </div>
+              <div class="formkit-field ck-hidden">
+                <div
+                  data-group="dropdown"
+                  class="formkit-3340"
+                  group="field"
+                  type="Custom"
+                  order="1"
+                  save_as="Tag"
+                >
+                  <select
+                    class="formkit-select"
+                    data-element="tags-select"
+                    name="tags[]"
+                  >
+                    <option value="2412775">.de</option>
+                    <option value="2412784">.es</option>
+                    <option value="2412760">.eu</option>
+                    <option value="2412761">.fr</option>
+                  </select>
+                </div>
               </div>
               <button
                 data-element="submit"

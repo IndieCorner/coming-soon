@@ -197,7 +197,7 @@
         document.querySelector(form).dataset.options = JSON.stringify(
           formOptions
         );
-        console.log(domainMap, locale, domainMap[locale])
+
         var opt = document.querySelector(`[value="${domainMap[locale]}"]`)
         opt && opt.setAttribute('selected', true);
 
